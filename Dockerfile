@@ -7,6 +7,7 @@ WORKDIR /docs
 
 VOLUME /docs
 
-EXPOSE 80
+EXPOSE 8000
 
-CMD ["mkdocs","serve","-a 0.0.0.0:80"]
+ENTRYPOINT ["mkdocs"]
+CMD ["serve", "--dev-addr=0.0.0.0:8000"]
